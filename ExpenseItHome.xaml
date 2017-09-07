@@ -8,40 +8,54 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ExpenseIt - Home">
 
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition />
             <RowDefinition Height="Auto" />
-            <!--<RowDefinition />-->
+            <RowDefinition />
+            <RowDefinition Height="Auto" />           
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
+            <ColumnDefinition Width="230" />
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Grid.Row="0"
+        <Grid.Background>
+            <ImageBrush ImageSource="image.jpg" />
+        </Grid.Background>
+
+        <Label Grid.Column="0" Grid.Row="0"
+               VerticalAlignment="Center"
+               Content="View Expense Report"
+               FontFamily="Trebuchet MS"
+               FontWeight="Bold"
+               FontSize="18"
+               Foreground="#0066cc" />
+
+        <Border Grid.Column="0" Grid.Row="1"
                 Height="35" Padding="5"
                 Background="#4E87D4">
-            
-            <Label VerticalAlignment="Center" 
-                   Foreground="White">Names</Label>
+
+            <Label VerticalAlignment="Center"
+                   Content="Names"
+                   Foreground="White" /> 
         </Border>
         
-        <ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1">
-            <ListBoxItem>Rajat</ListBoxItem>
-            <ListBoxItem>Xavi</ListBoxItem>
-            <ListBoxItem>Messi</ListBoxItem>
-            <ListBoxItem>Iniesta</ListBoxItem>
+        <ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="2">
+            <ListBoxItem Content="Rajat" />
+            <ListBoxItem Content="Xavi" />
+            <ListBoxItem Content="Messi" />
+            <ListBoxItem Content="Iniesta" />
         </ListBox>
 
-        <Button Grid.Column="0" Grid.Row="2"
+        <Button Grid.Column="0" Grid.Row="3"
                 Name="btnView"
                 Content="View"
                 Margin="0,10,0,0"
                 Width="125"
                 Height="25"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Left"
                 Click="btnView_Click" />
     </Grid>
 </Page>

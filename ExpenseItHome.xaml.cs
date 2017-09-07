@@ -23,7 +23,8 @@ namespace ExpenseIt {
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e) {
-
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage();
+            this.NavigationService.Navigate(expenseReportPage);
         }
     }
 }
